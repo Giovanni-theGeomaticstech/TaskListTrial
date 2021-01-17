@@ -27,7 +27,9 @@ function addItem(){
 
 // This function here removes the item
 function removeItem(){
-    parentTask = event.target.parentElement
+    let close_btn = event.target
+    parentTask = event.target.parentElement // This is the div that contains the `task and the x`
+    let task_to_be_deleted = parentTask.children[0] // Now you have the task
     parentTask.remove()
     alert("Task will be removed")
 }
